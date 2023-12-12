@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>cn.zzs.serialize</groupId>
-	<artifactId>serialize-tool-demo</artifactId>
-	<packaging>jar</packaging>
-	<version>1.0.0</version>
-	<name>serialize-tool-demo</name>
-	<url>http://maven.apache.org</url>
-    
-    
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.zzs.serialize</groupId>
+    <artifactId>serialize-tool-demo</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0</version>
+    <name>serialize-tool-demo</name>
+    <url>http://maven.apache.org</url>
+
+
     <dependencies>
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
@@ -22,24 +22,24 @@
             <version>${jmh.version}</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <!-- fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.74</version>
+            <version>2.0.43</version>
         </dependency>
         <!-- jackson -->
-        <dependency> 
-            <groupId>com.fasterxml.jackson.core</groupId> 
-            <artifactId>jackson-databind</artifactId> 
-            <version>2.11.3</version>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.1</version>
         </dependency>
         <!-- kryo -->
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>
-            <version>5.0.0</version>
+            <version>5.4.0</version>
         </dependency>
         <!-- fst -->
         <dependency>
@@ -61,19 +61,19 @@
         <dependency>
             <groupId>io.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
-            <version>1.7.2</version>
+            <version>1.8.0</version>
         </dependency>
-         <dependency>
-           <groupId>io.protostuff</groupId>
-           <artifactId>protostuff-runtime</artifactId>
-           <version>1.7.2</version>
-         </dependency>
-                
+        <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jmh.version>1.25</jmh.version>
+        <jmh.version>1.35</jmh.version>
         <javac.target>1.8</javac.target>
         <uberjar.name>benchmarks</uberjar.name>
     </properties>
@@ -103,7 +103,8 @@
                         <configuration>
                             <finalName>${uberjar.name}</finalName>
                             <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>org.openjdk.jmh.Main</mainClass>
                                 </transformer>
                             </transformers>

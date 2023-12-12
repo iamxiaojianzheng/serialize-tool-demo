@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * 部门
+ *
  * @author zzs
  * @date 2020年11月6日 下午1:41:18
  */
@@ -18,67 +19,67 @@ public class Department implements Serializable {
     private Integer level;
     private Integer orderNo;
     private List<Department> children;
-    
+
     public String getId() {
         return id;
     }
-    
+
     public void setId(String id) {
         this.id = id;
     }
-    
+
     public String getParentId() {
         return parentId;
     }
-    
+
     public void setParentId(String parentId) {
         this.parentId = parentId;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getNo() {
         return no;
     }
-    
+
     public void setNo(String no) {
         this.no = no;
     }
-    
+
     public String getAddress() {
         return address;
     }
-    
+
     public void setAddress(String address) {
         this.address = address;
     }
-    
+
     public Integer getLevel() {
         return level;
     }
-    
+
     public void setLevel(Integer level) {
         this.level = level;
     }
-    
+
     public Integer getOrderNo() {
         return orderNo;
     }
-    
+
     public void setOrderNo(Integer orderNo) {
         this.orderNo = orderNo;
     }
-    
+
     public List<Department> getChildren() {
         return children;
     }
-    
+
     public void setChildren(List<Department> children) {
         this.children = children;
     }
@@ -100,52 +101,52 @@ public class Department implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if(this == obj)
+        if (this == obj)
             return true;
-        if(obj == null)
+        if (obj == null)
             return false;
-        if(getClass() != obj.getClass())
+        if (getClass() != obj.getClass())
             return false;
-        Department other = (Department)obj;
-        if(address == null) {
-            if(other.address != null)
+        Department other = (Department) obj;
+        if (address == null) {
+            if (other.address != null)
                 return false;
-        } else if(!address.equals(other.address))
+        } else if (!address.equals(other.address))
             return false;
-        if(children == null) {
-            if(other.children != null)
+        if (children == null) {
+            if (other.children != null)
                 return false;
-        } else if(!children.equals(other.children))
+        } else if (!children.equals(other.children))
             return false;
-        if(id == null) {
-            if(other.id != null)
+        if (id == null) {
+            if (other.id != null)
                 return false;
-        } else if(!id.equals(other.id))
+        } else if (!id.equals(other.id))
             return false;
-        if(level == null) {
-            if(other.level != null)
+        if (level == null) {
+            if (other.level != null)
                 return false;
-        } else if(!level.equals(other.level))
+        } else if (!level.equals(other.level))
             return false;
-        if(name == null) {
-            if(other.name != null)
+        if (name == null) {
+            if (other.name != null)
                 return false;
-        } else if(!name.equals(other.name))
+        } else if (!name.equals(other.name))
             return false;
-        if(no == null) {
-            if(other.no != null)
+        if (no == null) {
+            if (other.no != null)
                 return false;
-        } else if(!no.equals(other.no))
+        } else if (!no.equals(other.no))
             return false;
-        if(orderNo == null) {
-            if(other.orderNo != null)
+        if (orderNo == null) {
+            if (other.orderNo != null)
                 return false;
-        } else if(!orderNo.equals(other.orderNo))
+        } else if (!orderNo.equals(other.orderNo))
             return false;
-        if(parentId == null) {
-            if(other.parentId != null)
+        if (parentId == null) {
+            if (other.parentId != null)
                 return false;
-        } else if(!parentId.equals(other.parentId))
+        } else if (!parentId.equals(other.parentId))
             return false;
         return true;
     }
@@ -172,5 +173,5 @@ public class Department implements Serializable {
         builder.append("]");
         return builder.toString();
     }
-    
+
 }

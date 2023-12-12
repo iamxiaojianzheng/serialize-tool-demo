@@ -8,14 +8,15 @@ import java.util.UUID;
 
 /**
  * 用户服务
+ *
  * @author zzs
  * @date 2020年11月6日 下午1:49:07
  */
 public class UserService {
-    
-    public List<User> getList(int count){
+
+    public List<User> getList(int count) {
         List<User> list = new ArrayList<User>(count);
-        for(int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             User user = new User();
             user.setId(UUID.randomUUID().toString().replace("-", ""));
             user.setAccount("account" + i);
@@ -46,7 +47,7 @@ public class UserService {
             user.setPermanentAddress("广东");
             user.setLoginDate(new Date());
             user.setPinyin("zzs" + i);
-            
+
             user.setField00("field00");
             user.setField01("field01");
             user.setField02("field02");
@@ -147,7 +148,7 @@ public class UserService {
             user.setField97("field97");
             user.setField98("field98");
             user.setField99("field99");
-            
+
             Position position = new Position();
             position.setId(UUID.randomUUID().toString().replace("-", ""));
             position.setName("King");
@@ -156,7 +157,7 @@ public class UserService {
             position.setLevel(2);
             position.setOrderNo(0);
             user.setPosition(position);
-            
+
             Department department = new Department();
             department.setId(UUID.randomUUID().toString().replace("-", ""));
             department.setName("软件研发部");
@@ -175,15 +176,15 @@ public class UserService {
             department2.setOrderNo(0);
             department.setChildren(Arrays.asList(department2));
             user.setDepartment(department);
-            
+
             list.add(user);
         }
         return list;
     }
-    
-    
+
+
     public User get() {
         return getList(1).get(0);
     }
-    
+
 }
